@@ -15,10 +15,10 @@ app.use(express.json({ limit: '20mb' }));
 app.use(express.urlencoded({ extended: false, limit: '20mb' }));
 
 app.use(express.static('public'))
-
+app.set(path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use('/', appRouter);
 
-app.listen(PORT, () => { console.log(`server started on port ${PORT}`) });
+app.listen(PORT, () => console.log(`server started on port ${PORT}`));
 
