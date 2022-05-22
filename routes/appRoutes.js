@@ -6,7 +6,7 @@ const router = require('express').Router();
 /*
 get routes
 */
-router.get('/home', (req, res) => {
+router.get('/', (req, res) => {
     res.status(200).render('index')
 });
 
